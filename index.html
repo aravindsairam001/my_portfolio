@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind Sairam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            min-height: 100vh;
+            padding-top: 80px; /* Add padding to avoid content being hidden by fixed header */
+            padding-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .project-card img {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-white">
+                    <a href="#home">Aravind Sairam</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 hover:bg-gray-800">About</a>
+            <a href="#projects" class="block py-2 px-6 hover:bg-gray-800">Projects</a>
+            <a href="#contact" class="block py-2 px-6 hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section container mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="https://i.imgur.com/7D7gB44.jpeg" alt="Aravind Sairam Profile Picture" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-8 border-4 border-cyan-400 shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Aravind Sairam</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8">I'm a Robotics Software Engineer based in Chennai, India.</p>
+            <a href="#projects" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                View My Work
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                     <img src="https://i.imgur.com/7D7gB44.jpeg" alt="About Me Image" class="rounded-lg shadow-2xl w-full object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg text-gray-400 mb-6">
+                        I'm a Robotics Engineer with deep expertise in SLAM, robot navigation, and computer vision, built on a Master's in Robotics from the University of Bristol and over 3 years of hands-on development.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-6">
+                        I have a track record of success in both real-world and simulated environments, demonstrated through projects like a Dual-Robotic SLAM-based Search and Rescue system. I'm skilled in ROS, mapping & localization, visual detection, and robotic system integration, with a proven ability to solve complex spatial problems and implement robust autonomous navigation pipelines.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4">My Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">SLAM (Visual, Graph-based)</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">ROS</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">C++</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">OpenCV</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">Robot Navigation</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">RViz</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">Gazebo</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">YOLO</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">Embedded Programming</span>
+                        <span class="bg-gray-700 py-2 px-4 rounded-full text-sm">GIT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col project-card">
+                    <div class="overflow-hidden"><img src="https://i.imgur.com/4tE0YwB.png" alt="KitCounter AI Project" class="w-full h-56 object-cover"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Robotic Software Developer (PoC)</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Developed real-time object detection pipelines using YOLOv7 with Intel RealSense Depth Cameras, crucial for visual SLAM and semantic mapping.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col project-card">
+                    <div class="overflow-hidden"><img src="https://i.imgur.com/uN1m3a5.png" alt="SLAM Search and Rescue Project" class="w-full h-56 object-cover"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Dual-Robotic SLAM Search & Rescue</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Led a team to develop a search-and-rescue system with two TurtleBots, achieving a 78% success rate in complex simulations using coordinated SLAM maps and human detection.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col project-card">
+                    <div class="overflow-hidden"><img src="https://i.imgur.com/xJ2g9r0.png" alt="IoT Brake Pad System Project" class="w-full h-56 object-cover"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Brake Pad Wear Warning System</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Engineered an IoT-based brake pad wear warning system to enhance safety for heavy vehicles, using Arduino and GSM for real-time data transmission.</p>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold mt-auto">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg text-gray-400 mb-8">
+                    I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to reach out! My email is <a href="mailto:aravindsairam98@gmail.com" class="text-cyan-400 hover:underline">aravindsairam98@gmail.com</a>.
+                </p>
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                    <textarea name="message" placeholder="Your Message" required rows="5" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+                    <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Aravind Sairam. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/aravindsairam" target="_blank" rel="noopener noreferrer" class="hover:text-white">GitHub</a>
+                <a href="https://www.linkedin.com/in/aravindsairam/" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
+                <a href="#" class="hover:text-white">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a, .container a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if(link.href.includes('#')) { // only for internal links
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
