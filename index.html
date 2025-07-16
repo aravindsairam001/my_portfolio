@@ -183,13 +183,21 @@
                     <div class="md:w-1/3 w-full">
                         <div class="glass-card rounded-lg p-6">
                             <h3 class="font-bold text-white text-xl mb-4">Education</h3>
-                            <div class="mb-4">
-                                <h4 class="font-semibold text-white">Masters in Robotics</h4>
-                                <p class="text-sm text-gray-400">University of Bristol</p>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="images/uob.jpg" alt="University of Bristol Logo" class="h-12 w-12 object-contain flex-shrink-0">
+                                <div>
+                                    <h4 class="font-semibold text-white">Masters in Robotics</h4>
+                                    <p class="text-sm text-gray-400">University of Bristol</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-white">Bachelors in Mechatronics</h4>
-                                <p class="text-sm text-gray-400">Rajalakshmi Engineering College</p>
+                            <div class="flex items-center gap-4">
+                                 <div class="h-12 w-12 flex-shrink-0 flex items-center justify-center bg-white rounded-md p-1">
+                                    <img src="images/REC_logo.png" alt="Rajalakshmi Engineering College Logo" class="h-full w-full object-contain">
+                                 </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Bachelors in Mechatronics</h4>
+                                    <p class="text-sm text-gray-400">Rajalakshmi Engineering College</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -233,7 +241,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1: Drone-Based Bridge Defect Detection (Ongoing) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-bridge-project.jpg" alt="Bridge Defect Project" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/bridge.png" alt="Bridge Defect Project" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-xl font-bold text-white">Drone-Based Bridge Defect Detection</h3>
@@ -246,7 +254,7 @@
                     </div>
                     <!-- Project 2: Person-Following Drone with ESP32 (2024) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-drone-project.jpg" alt="Person Following Drone" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/follow.png" alt="Person Following Drone" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-white mb-2">Person-Following Drone with ESP32</h3>
                             <p class="mb-4 text-gray-400 flex-grow">An autonomous drone built on ESP-Drone firmware that uses an ESP32-CAM to stream video. A ground station running Python with YOLOv8 detects a person in the video feed and sends real-time control commands (Pitch, Roll, Yaw) back to the drone via UDP sockets to actively follow the target.</p>
@@ -256,7 +264,7 @@
                     </div>
                     <!-- Project 3: Kitchen Cleaning Robot Simulation (Ongoing) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-robot-arm-project.jpg" alt="Kitchen Robot Project" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/kitchen.png" alt="Kitchen Robot Project" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                              <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-xl font-bold text-white">Kitchen Cleaning Robot Simulation</h3>
@@ -269,7 +277,7 @@
                     </div>
                     <!-- Project 4: Dual-Robotic SLAM Search & Rescue (2023) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-robot-arm-project.jpg" alt="SLAM Search & Rescue" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/search.png" alt="SLAM Search & Rescue" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-white mb-2">Dual-Robotic SLAM Search & Rescue</h3>
                             <p class="mb-4 text-gray-400 flex-grow">Led a team to develop a search-and-rescue system with two TurtleBots, achieving a 78% success rate in complex Gazebo simulations. The project involved coordinated multi-robot SLAM, map merging, and human detection using Darknet (YOLO).</p>
@@ -278,7 +286,7 @@
                     </div>
                     <!-- Project 5: IoT Brake Pad Wear Warning System (2020) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-3d-printing-project.jpg" alt="IoT Brake System" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/brake.png" alt="IoT Brake System" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-white mb-2">IoT Brake Pad Wear Warning System</h3>
                             <p class="mb-4 text-gray-400 flex-grow">Engineered an IoT-based brake pad wear warning system to enhance safety protocols for heavy vehicles. The system used custom sensors, an Arduino microcontroller, and a GSM module for real-time data transmission and visualization on the ThingSpeak IoT Server.</p>
@@ -287,7 +295,7 @@
                     </div>
                     <!-- Project 6: Disabled-Friendly E-Vehicle (2019) -->
                     <div class="glass-card rounded-lg overflow-hidden group">
-                        <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/v2/web_assets/portfolio-accessible-vehicle.jpg" alt="Disabled-Friendly E-Vehicle" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="images/disabled.png" alt="Disabled-Friendly E-Vehicle" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-white mb-2">Disabled-Friendly E-Vehicle</h3>
                             <p class="mb-4 text-gray-400 flex-grow">Designed and prototyped an inclusive four-wheeled electric vehicle for wheelchair users. Focused on ergonomic design and accessibility, implementing ultrasonic sensors and DC motors for obstacle avoidance, with a Raspberry Pi running Python and OpenCV for control.</p>
