@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aravindsairam001.github.io/my_portfolio/sitemap.xml
+
+# Disallow crawling of certain file types
+Disallow: /*.pdf$
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /.git/
