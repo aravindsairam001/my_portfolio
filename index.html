@@ -317,6 +317,9 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1000;
             box-shadow: 0 8px 32px rgba(168, 85, 247, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .scroll-to-top.visible {
@@ -1426,8 +1429,12 @@
                     <!-- Contact Form -->
                     <div class="glass-card rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
-                        <form class="space-y-6" method="POST" data-netlify="true" name="contact-form">
-                            <input type="hidden" name="form-name" value="contact-form" />
+                        <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Web3Forms Configuration -->
+                            <input type="hidden" name="access_key" value="1f0719c7-d4b2-4003-9548-0416c24f42be">
+                            <input type="hidden" name="subject" value="New Portfolio Contact from Website">
+                            <input type="hidden" name="from_name" value="Portfolio Website">
+                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
@@ -1480,6 +1487,8 @@
                             
                             <p class="text-sm text-gray-400 text-center">
                                 * Required fields. I'll get back to you within 24 hours.
+                                <br>
+                                <span class="text-xs mt-1 block text-green-400">✅ <strong>Form Active:</strong> Messages will be sent directly to aravindsairam98@gmail.com</span>
                             </p>
                         </form>
                     </div>
@@ -1805,7 +1814,7 @@
 
         // Enhanced form validation and UX
         function initFormEnhancements() {
-            const form = document.querySelector('form[data-netlify]');
+            const form = document.querySelector('form[action*="web3forms"]');
             if (!form) return;
 
             const inputs = form.querySelectorAll('input, textarea, select');
@@ -1840,12 +1849,12 @@
                 });
             });
 
-            // Enhanced form submission
+            // Enhanced form submission for Web3Forms
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 
                 const submitButton = form.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
+                const originalText = submitButton.innerHTML;
                 
                 submitButton.disabled = true;
                 submitButton.innerHTML = `
@@ -1858,19 +1867,25 @@
 
                 try {
                     const formData = new FormData(form);
-                    const response = await fetch('/', {
+                    const response = await fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(formData).toString()
+                        body: formData
                     });
 
                     if (response.ok) {
-                        showNotification('Message sent successfully!', 'success');
+                        showNotification('Message sent successfully! 🎉', 'success');
                         form.reset();
+                        
+                        // Reset any input styling
+                        inputs.forEach(input => {
+                            input.style.borderColor = '#6b7280';
+                            input.style.boxShadow = 'none';
+                        });
                     } else {
                         throw new Error('Form submission failed');
                     }
                 } catch (error) {
+                    console.error('Form submission error:', error);
                     showNotification('Failed to send message. Please try again.', 'error');
                 } finally {
                     submitButton.disabled = false;
